@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body bgcolor="violet" text="white" link="red" vlink="blue" alink="green">
+    <center>
+        <font color="red" size="7" </center>Application Form</font>
+        <hr size="5" color="blue" width="400">
+        <form action="a.html" method="get">
+
+            <table align="center" cellspacing="5" cellpadding="5">
+                <tr>
+                    <td>First Name:</td>
+                    <td><input type="text" name="fname" placeholder="FIRST NAME " size="30" maxlength="6" /></td>
+                </tr>
+                <tr>
+                    <td>Last Name:</td>
+                    <td><input type="text" name="lname" value="" placeholder="LAST NAME" size="30"></td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><input type="password" placeholder="ENTER YOUR PASSWORD" name="pwd" /></td>
+                </tr>
+                <tr>
+                    <td>Comments:</td>
+                    <td><textarea rows="8" cols="20" name="comm" placeholder="ENTER COMMENTS"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Language:</td>
+                    <td><input type="checkbox" name="cb1" checked>Hindi
+                        <input type="checkbox" name="cb1">English
+                        <input type="checkbox" name="cb1">Punjabi
+                    </td>
+                </tr>
+                <tr>
+                    <td>Gender:</td>
+                    <td><input type="radio" name="r1">Male
+                        <input type="radio" name="r1">Female
+                    </td>
+                </tr>
+                <tr>
+                    <td>Select Fruit:</td>
+                    <td><select name="s1">
+                            <option>----select----</option>
+                            <option>Orange</option>
+                            <option>Mango</option>
+                            <option>Pineapple</option>
+                            <option>Strawberry</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td>Select Resume</td>
+                    <td><input type="file"></td>
+                </tr>
+                <tr>
+                    <td align="center" colspan="2">
+                        <input type="submit" value="REGISTER" />
+                        <input type="submit" value="CLEAR" />
+                        <input type="button" value="OK" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+</body>
+
+</html>
