@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT</title>
+</head>
+<body>
+    <h1 >JS BASICS:</h1>
+    <button onclick="alert('Hello')">Click me</button><br> <!-- inline js -->
+    <button onclick="showAlert()">Alert using fn</button><br>
+    <button onclick="jsAlert()">External alert </button><br>
+    <button onclick="scopeTest()">Scope Test</button><br>
+    <button onclick="Hoist()">Hoist</button><br>
+
+
+
+    <!-- ";" is not compulsory -->
+     
+    <script>
+
+        function showAlert(){
+            alert('Hello, this is js alert');
+        }
+        
+    </script>
+
+    <script src="externaljs.js"></script> <!-- external js file -->
+
+
+</body>
+</html>
