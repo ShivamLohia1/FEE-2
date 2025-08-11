@@ -10,7 +10,7 @@ function moveZeroesToEnd(arr) {
     }
     return arr;
 }
-
 // Example usage:
 let arr = [0, 1, 0, 3, 12];
+
 console.log(moveZeroesToEnd(arr)); // Output: [1, 3, 12, 0, 0]
