@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Click Counter</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #e0e7ff 0%, #f8fafc 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .counter-box {
+      background: #fff;
+      padding: 32px 40px;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px #0001;
+      text-align: center;
+    }
+    .count {
+      font-size: 2.5rem;
+      color: #007bff;
+      margin-bottom: 18px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      transition: color 0.3s;
+    }
+    .btn-group {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+    }
+    .btn {
+      padding: 14px 32px;
+      font-size: 1.2rem;
+      background: linear-gradient(90deg, #007bff 60%, #0056b3 100%);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 2px 8px #007bff22;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .btn:hover {
+      background: linear-gradient(90deg, #0056b3 60%, #007bff 100%);
+      transform: scale(1.05);
+    }
+    .btn.reset {
+      background: linear-gradient(90deg, #e91e63 60%, #c2185b 100%);
+    }
+    .btn.reset:hover {
+      background: linear-gradient(90deg, #c2185b 60%, #e91e63 100%);
+    }
+    .btn.decrement {
+      background: linear-gradient(90deg, #4caf50 60%, #388e3c 100%);
+    }
+    .btn.decrement:hover {
+      background: linear-gradient(90deg, #388e3c 60%, #4caf50 100%);
+    }
+  </style>
+</head>
+<body>
+  <div class="counter-box">
+    <div class="count" id="count">0</div>
+    <div class="btn-group">
+      <button class="btn" id="increaseBtn">Increase</button>
+      <button class="btn decrement" id="decreaseBtn">Decrease</button>
+      <button class="btn reset" id="resetBtn">Reset</button>
+    </div>
+  </div>
+  <script>
+    let count = 0;
+    const countEl = document.getElementById("count");
+    const increaseBtn = document.getElementById("increaseBtn");
+    const decreaseBtn = document.getElementById("decreaseBtn");
+    const resetBtn = document.getElementById("resetBtn");
+
+    function updateCount(color="#007bff") {
+      countEl.textContent = count;
+      countEl.style.color = color;
+      setTimeout(() => countEl.style.color = "#007bff", 200);
+    }
+
+    increaseBtn.addEventListener("click", () => {
+      count++;
+      updateCount("#e91e63");
+    });
+
+    decreaseBtn.addEventListener("click", () => {
+      if (count > 0) count--;
+      updateCount("#4caf50");
+    });
+
+    resetBtn.addEventListener("click", () => {
+      count = 0;
+      updateCount("#c2185b");
+    });
+  </script>
+</body>
+</html>
