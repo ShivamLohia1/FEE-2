@@ -76,11 +76,9 @@
   const green = document.getElementById("green");
   const statusLabel = document.getElementById("statusLabel");
   const timerEl = document.getElementById("timer");
-
   let state = 0;
   const intervalTime = 1200;
   let timeLeft = intervalTime / 1000;
-
   function updateLight() {
     red.classList.remove("on");
     yellow.classList.remove("on");
@@ -113,4 +111,5 @@
   }, 100);
   </script>
 </body>
+
 </html>
